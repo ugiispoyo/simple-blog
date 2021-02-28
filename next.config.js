@@ -6,7 +6,7 @@ module.exports = {
         domain: 'https://simple-blog-nu.vercel.app'
     },
     images: {
-        domains: ['simple-blog-nu.vercel.app/'],
+        domains: ['https://simple-blog-nu.vercel.app'],
     },
     async rewrites() {
         return [
