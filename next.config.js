@@ -16,7 +16,15 @@ module.exports = {
             },
             {
                 source: '/detail/:id',
-                destination: '/news/:id',
+                destination: '/artikel/:id',
+            },
+            {
+                source: '/:artikel*',
+                destination: '/:artikel*',
+            },
+            {
+                source: '/artikel/page/:artikel',
+                destination: '/:artikel*',
             },
         ]
     },

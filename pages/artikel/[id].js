@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Layout from './../../src/blocks/Layout';
+import Layout from '../../src/blocks/Layout';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { makeStyles } from '@material-ui/core/styles';
@@ -8,8 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* Import Other Components */
-import WrapContent from './../../src/components/WrapContent';
-import HeadDetail from './../../src/components/HeadDetail';
+import WrapContent from '../../src/components/WrapContent';
+import HeadDetail from '../../src/components/HeadDetail';
 /* End Import Other Components */
 
 const useStyles = makeStyles((theme) => ({

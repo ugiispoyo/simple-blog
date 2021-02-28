@@ -36,7 +36,7 @@ function Home(props) {
     )
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({res}) => {
     try {
         const data = await fetch(
           process.env.endPoint+"movie/upcoming?api_key="+process.env.apiKey
