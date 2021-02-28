@@ -57,7 +57,7 @@ function Detail(props) {
     }
 
     return (
-        <Layout title="Detail artikel">
+        <Layout title={"Artikel - " + props.data.title}>
             {/* Custom head for meta tag */}
             <HeadDetail 
                 url={domain}
