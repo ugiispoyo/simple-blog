@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /* Import Other Components */
 import WrapContent from '../../src/components/WrapContent';
 import HeadDetail from '../../src/components/HeadDetail';
+import ErrorStatus from '../../src/components/ErrorStatus';
 /* End Import Other Components */
 
 const useStyles = makeStyles((theme) => ({
@@ -51,7 +52,9 @@ function Detail(props) {
 
     const [domain, setDomain] = useState(process.env.domain+''+router.asPath);
 
-    // console.log(props.data)
+    if(props.data.status_code === 34) {
+        return <ErrorStatus code="404" message="Not Found" />
+    }
 
     return (
         <Layout title="Detail artikel">
@@ -72,12 +75,12 @@ function Detail(props) {
                         className={classes.img_}
                     />
                 </Box>
-                <Box>
+                <Box p={2}>
                     <Typography variant='h1' className={classes.h1}>
                         {props.data.title}
                     </Typography>
                     <ul className={classes.share_sosmed}>
-                        <li className={classes.share_sosmed_li}>
+                        <li className={classes.share_sosmed_li} style={{marginLeft: '0px'}}>
                             Share Sosmed:
                         </li>
                         <li className={classes.share_sosmed_li}>

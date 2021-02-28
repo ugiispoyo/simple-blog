@@ -7,11 +7,16 @@ import Pagination from '@material-ui/lab/Pagination';
 /* Import Other Components */
 import WrapContent from '../src/components/WrapContent';
 import ListItem from '../src/components/ListItem';
+import ErrorStatus from '../src/components/ErrorStatus';
 /* End Import Other Components */
 
 function Artikel({results, total_pages, page}) {
 
     const router = useRouter();
+
+    if(results.length === 0) {
+        return <ErrorStatus code="404" message="Not Found" />
+    }
 
     const handleClick = (e, v) => {
         router.push('/artikel/page/'+v);

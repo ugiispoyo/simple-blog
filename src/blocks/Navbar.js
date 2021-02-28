@@ -33,7 +33,7 @@ export default function Navbar() {
             <div className={classes.my_wrap}>
                 <div>
                     <Link href="/">
-                        <a style={{marginLeft: '15px'}} className={classes.nav_a}>
+                        <a style={{marginLeft: '0px'}} className={classes.nav_a}>
                             Simple Blog
                         </a>
                     </Link>
