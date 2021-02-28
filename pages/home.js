@@ -11,8 +11,6 @@ import ListItem from './../src/components/ListItem';
 
 function Home(props) {
 
-    console.log(props.data.results)
-
     return (
         <Layout title="Home">
             <WrapContent>
@@ -39,6 +37,7 @@ function Home(props) {
     )
 }
 
+// Get data from API with SSR 
 export const getServerSideProps = async ({res}) => {
     try {
         const data = await fetch(

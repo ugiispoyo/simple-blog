@@ -38,6 +38,8 @@ function Artikel({results, total_pages, page}) {
         </Layout>
     )
 }
+
+// Get data from API with SSR 
 export const getServerSideProps = async ({params,res}) => {
     try {
         let { artikel } = params;

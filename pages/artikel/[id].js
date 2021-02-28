@@ -104,6 +104,7 @@ function Detail(props) {
     )
 }
 
+// Get data from API with SSR 
 export const getServerSideProps = async ({
     params,
     res,
