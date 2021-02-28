@@ -8,4 +8,5 @@
 <a href="https://simple-blog-nu.vercel.app/">
     Klick live preview
 </a>
+<hr/>
 <span>By: Ugi Ispoyo Widodo</span>
