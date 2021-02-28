@@ -3,10 +3,10 @@ module.exports = {
         apiKey: '2fccde01a371b106b09a241d6d1d5b49',
         endPoint: 'https://api.themoviedb.org/3/',
         endPointImg: 'https://www.themoviedb.org/t/p/w300_and_h300_bestv2',
-        domain: 'https://simple-blog-nu.vercel.app'
+        domain: 'http://localhost:3000/'
     },
     images: {
-        domains: ['https://simple-blog-nu.vercel.app'],
+        domains: ['localhost:3000'],
     },
     async rewrites() {
         return [
