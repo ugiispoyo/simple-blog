@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     wrap: {
         maxWidth: '750px',
         width: '100%',
-        margin: '0px auto'
+        margin: '0px auto',
     },
 }));
 

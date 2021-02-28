@@ -17,22 +17,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Headline() {
+export default function Headline({data}) {
     const classes = useStyles();
 
     return (
         <Container>
             <Box mt={2} mb={1}>
-                <img src={process.env.endPointImg+"/y89kFMNYXNKMdlZjR2yg7nQtcQH.jpg"} 
+                <img src={process.env.endPointImg+data.poster_path} 
                     width="100%"
                     height="300px"
-                    alt="Test Headline"
+                    alt={data.title}
                     className={classes.img_headline}
                 />
-                <Link href="/detail/1">
+                <Link href={'/detail/'+data.id}>
                     <a className={classes.a}>
                         <Typography variant='h4'>
-                            Sound of Metal
+                            {data.title}
                         </Typography>
                     </a>
                 </Link>

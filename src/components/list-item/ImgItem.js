@@ -11,15 +11,15 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function ImgItem() {
+export default function ImgItem({img, title}) {
     const classes = useStyles();
 
     return (
         <Box mt={2} mb={1}>
-            <img src={process.env.endPointImg+"/y89kFMNYXNKMdlZjR2yg7nQtcQH.jpg"} 
+            <img src={process.env.endPointImg+img} 
                 width="100%"
                 height="300px"
-                alt="Test Headline"
+                alt={title}
                 className={classes.img_}
             />
         </Box>

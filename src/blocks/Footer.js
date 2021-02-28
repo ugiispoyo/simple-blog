@@ -22,7 +22,7 @@ export default function Footer() {
 
     return (
         <Container className={classes.my_wrap}>
-            <p className={classes.p_footer}>&copy; 2021 Simple Blog</p>
+            <p className={classes.p_footer}>&copy; 2021 Simple Blog. By: Ugi Ispoyo Widodo</p>
         </Container>
     )
 }

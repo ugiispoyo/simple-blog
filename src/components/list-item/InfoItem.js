@@ -11,15 +11,15 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function InfoItem() {
+export default function InfoItem({title, id}) {
     const classes = useStyles();
 
     return (
         <Box mt={2} mb={1} ml={3}>
-            <Link href="/detail/1">
+            <Link href={"/detail/"+id}>
                 <a className={classes.a}>
                     <Typography variant='h5'>
-                        Sound of Metal
+                        {title}
                     </Typography>
                 </a>
             </Link>

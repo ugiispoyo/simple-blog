@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function ListItem() {
+export default function ListItem(props) {
     const classes = useStyles();
 
     return (
@@ -26,11 +26,11 @@ export default function ListItem() {
                 <Grid
                 container
                 direction="row">
-                    <Grid xs={4}>
-                        <ImgItem />
+                    <Grid item xs={4}>
+                        <ImgItem img={props.data.poster_path} title={props.data.title}  />
                     </Grid>
-                    <Grid xs={8}>
-                        <InfoItem />
+                    <Grid item xs={8}>
+                        <InfoItem title={props.data.title} id={props.data.id} />
                     </Grid>
                 </Grid>
             </Box>

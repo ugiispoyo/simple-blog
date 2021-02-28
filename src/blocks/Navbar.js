@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
@@ -35,11 +34,7 @@ export default function Navbar() {
                 <div>
                     <Link href="/">
                         <a style={{marginLeft: '15px'}} className={classes.nav_a}>
-                            <Image className={classes.logoExample}
-                                src="/images/example-logo.png"
-                                width="100px"
-                                height="30px"
-                                alt="Contoh logo" />
+                            Simple Blog
                         </a>
                     </Link>
                 </div>
