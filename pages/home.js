@@ -18,10 +18,13 @@ function Home(props) {
             <WrapContent>
                 <Headline data={props.data.results[0]} /> 
                 {
-                    props.data.results.map((value, i) => 
-                        i > 0 ?
-                            <ListItem key={i} data={value} />
-                        : null
+                    props.data.results.map((value, i) => {
+                            return (
+                                i > 0 ?
+                                    <ListItem key={i} data={value} />
+                                : null
+                            )   
+                        }
                     )
                 }
                 <Box my={3} display="flex" justifyContent="center">

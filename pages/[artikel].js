@@ -1,4 +1,5 @@
 import Layout from '../src/blocks/Layout';
+import safeJsonStringify from 'safe-json-stringify';
 import { useRouter } from 'next/router'
 import Box from '@material-ui/core/Box';
 import Pagination from '@material-ui/lab/Pagination';
@@ -8,47 +9,53 @@ import WrapContent from '../src/components/WrapContent';
 import ListItem from '../src/components/ListItem';
 /* End Import Other Components */
 
-function Artikel(props) {
+function Artikel({results, total_pages, page}) {
 
     const router = useRouter();
 
     const handleClick = (e, v) => {
         router.push('/artikel/page/'+v);
     }
-
+    
     return (
         <Layout title="Artikel">
             <WrapContent>
                 {
-                    props.data.results.map((value, i) => 
-                        <ListItem key={i} data={value} />
+                    results.map((value, i) => {
+                            return (
+                                <ListItem key={i} data={value} />
+                            )
+                        }
                     )
                 }
                 <Box my={3} display="flex" justifyContent="center">
-                    <Pagination count={props.data.total_pages} 
+                    <Pagination count={total_pages} 
                         variant="outlined" 
                         onChange={handleClick}
-                        page={props.data.page} />
+                        page={page} />
                 </Box>
             </WrapContent>      
         </Layout>
     )
 }
-
 export const getServerSideProps = async ({params,res}) => {
     try {
         let { artikel } = params;
         if(artikel == 'artikel'){
             artikel = 1;
         }
-        const data = await fetch(
+        let data = await fetch(
           process.env.endPoint+"movie/upcoming?page="+parseInt(artikel)+"&api_key="+process.env.apiKey
         ).then((response) => response.json());
 
+        let dataResults = safeJsonStringify(data.results);
+        let results = JSON.parse(dataResults);
+
         return {
             props: {
-                data,
-                page: artikel
+                results: results,
+                total_pages: data.total_pages,
+                page: parseInt(artikel)
             },
         };
     } catch {
