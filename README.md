@@ -3,6 +3,6 @@
 <hr/>
 <h2>How To Run</h2>
 <ul>
-    <li>npm run dev-start</li>
+    <li>npm run start</li>
 </ul>
 <span>By: Ugi Ispoyo Widodo</span>
