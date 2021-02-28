@@ -5,4 +5,7 @@
 <ul>
     <li>npm run start</li>
 </ul>
+<a href="https://simple-blog-nu.vercel.app/">
+    Klick live preview
+</a>
 <span>By: Ugi Ispoyo Widodo</span>
