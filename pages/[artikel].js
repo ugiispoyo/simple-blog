@@ -14,9 +14,9 @@ function Artikel({results, total_pages, page}) {
 
     const router = useRouter();
 
-    if(results.length === 0) {
-        return <ErrorStatus code="404" message="Not Found" />
-    }
+    // if(results.length === 0) {
+    //     return <ErrorStatus code="404" message="Not Found" />
+    // }
 
     const handleClick = (e, v) => {
         router.push('/artikel/page/'+v);

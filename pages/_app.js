@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+
+import NextNProgress from '../src/components/NextNProgress';
+
 import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -26,6 +29,12 @@ export default function MyApp(props) {
       </Head>
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
+      <NextNProgress
+        color="yellow"
+        startPosition="0.3"
+        stopDelayMs="200"
+        height="3"
+      />
       <Component {...pageProps} />
     </React.Fragment>
   );
