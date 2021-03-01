@@ -30,7 +30,7 @@ export default function MyApp(props) {
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
       <NextNProgress
-        color="yellow"
+        color="#fe9400"
         startPosition="0.3"
         stopDelayMs="200"
         height="3"
